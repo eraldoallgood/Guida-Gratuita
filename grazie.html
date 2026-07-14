@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Grazie — Valle Benedetta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/></noscript>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:#F5EDE4;font-family:'Inter',sans-serif;color:#2C2420;}
+.pg{max-width:900px;margin:0 auto;}
+
+/* HEADER */
+.ty-hdr{background:#831619;padding:0.4rem 2rem;display:flex;justify-content:center;align-items:center;}
+
+/* HERO TY */
+.ty-hero{background:#F5EDE4;padding:3.5rem 3.5rem 2.5rem;text-align:center;}
+.ty-check{width:58px;height:58px;border-radius:50%;border:1.5px solid #831619;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:26px;color:#831619;}
+.ty-title{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:400;color:#1E1814;margin-bottom:1.5rem;line-height:1.25;}
+.btn-download{display:inline-block;background:#831619;color:#fff;border:none;border-radius:6px;padding:15px 40px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;}
+.btn-download:hover{background:#6D0C0C;}
+.ty-intro{font-size:13.5px;color:#6A5E54;line-height:1.8;max-width:540px;margin:0 auto 2.5rem;font-weight:300;}
+
+/* VIDEO */
+.video-section{background:#F5EDE4;padding:0 3.5rem 1rem;}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;background:#1E1814;border-radius:10px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,0.15);}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.video-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
+.video-play{width:64px;height:64px;border-radius:50%;background:rgba(131,22,25,0.9);display:flex;align-items:center;justify-content:center;}
+.video-play svg{margin-left:4px;}
+.video-label{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.12em;text-transform:uppercase;}
+.video-cta{text-align:center;padding:2rem 0 3rem;}
+.btn-ritiri{display:inline-block;background:#1E1814;color:#F5EDE4;border:none;border-radius:6px;padding:13px 30px;font-size:13.5px;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.04em;}
+.btn-ritiri:hover{background:#2C2420;}
+
+/* SEZIONI INFO — testo sx, immagine dx */
+.info-section{padding:4rem 3.5rem;}
+.info-section.alt{background:#EEE4D8;}
+.info-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.info-eyebrow{font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;color:#831619;margin-bottom:0.6rem;}
+.info-title{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:400;color:#1E1814;line-height:1.25;margin-bottom:1.1rem;}
+.info-text{font-size:13.5px;color:#5A504A;line-height:1.8;margin-bottom:1.75rem;font-weight:300;}
+.info-left{display:flex;flex-direction:column;justify-content:center;}
+.info-img{border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.12);max-height:320px;}
+.info-img img{width:100%;height:auto;display:block;}
+.btn-scopri{display:inline-block;background:transparent;color:#831619;border:1.5px solid #831619;border-radius:6px;padding:10px 24px;font-size:12.5px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.05em;}
+.btn-scopri:hover{background:#831619;color:#fff;transition:0.2s;}
+
+/* FOOTER */
+.foot-band{background:#831619;padding:0.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;}
+.foot-copy{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.04em;}
+
+/* MOBILE */
+@media(max-width:640px){
+  .ty-hdr{padding:0 1rem;}
+  .ty-hdr img{height:76px !important;}
+  .ty-hero{padding:2.5rem 1.25rem 2rem;}
+  .ty-title{font-size:1.6rem;}
+  .ty-intro{font-size:13px;}
+  .video-section{padding:0 1.25rem 0.5rem;}
+  .video-cta{padding:1.5rem 0 2.5rem;}
+  /* Sezioni: stack verticale — immagine sopra, testo sotto */
+  .info-section{padding:2.5rem 1.25rem;}
+  .info-inner{grid-template-columns:1fr;gap:1.5rem;}
+  /* Immagine prima del testo su mobile */
+  .info-img{order:-1;}
+  .info-title{font-size:1.4rem;}
+  .info-text{font-size:13px;}
+  section[style*='border-top']{padding:2.5rem 1.25rem;}
+  .foot-band{flex-direction:column;gap:0.6rem;text-align:center;padding:0.75rem 1.25rem;}
+  .foot-band img{height:56px !important;}
+  .btn-download{padding:14px 28px;font-size:13px;}
+}
+</style>
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1958492354925104');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1958492354925104&ev=PageView&noscript=1"/></noscript>
+  <!-- Fine Meta Pixel -->
+  <!-- Meta Pixel Lead event -->
+  <script>fbq('track', 'Lead');</script>
+  <!-- Fine Meta Pixel Lead -->
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NWZEQ8FKL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6NWZEQ8FKL', {
+      'cookie_domain': 'auto',
+      'linker': {
+        'domains': ['vallebenedetta.org', 'guida.vallebenedetta.org']
+      }
+    });
+
+    // Evento conversione — lead acquisita
+    gtag('event', 'generate_lead_guida', {
+      'event_category': 'conversione',
+      'event_label': 'Guida Ritorna a Te'
+    });
+
+    function trackEvent(action, category, label) {
+      gtag('event', action, {
+        'event_category': category,
+        'event_label': label
+      });
+    }
+  </script>
+  <!-- Fine Google Analytics 4 -->
+</head>
+<body>
+<div class="pg">
+
+  <header class="ty-hdr">
+    <img src="logo.png" alt="Valle Benedetta Tuscany Retreat Center" style="height:88px;width:auto;display:block;" width="138" height="88"/>
+  </header>
+
+  <section class="ty-hero">
+    <div class="ty-check">✓</div>
+    <h1 class="ty-title">Grazie. Trovi la nostra guida<br>da scaricare qui sotto.</h1>
+    <button class="btn-download" onclick="trackEvent('click_scarica_guida','thank_you','Scaricala ora');window.open('https://vallebenedetta.org/wp-content/uploads/2026/07/Ritorna-a-Te-Guida-Gratuita-di-Valle-Benedetta-Retreat-Center.pdf', '_blank')">Scaricala ora</button>
+    <p class="ty-intro">Tra qualche minuto riceverai un'email di benvenuto e un racconto della nostra storia.<br>Nel frattempo, guarda il video di ringraziamento qui sotto e scopri i nostri prossimi ritiri in programma.</p>
+  </section>
+
+      <div class="video-section">
+    <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;">
+      <iframe 
+        src="https://www.youtube.com/embed/5EMxvr7c95I?si=N7wts96ODsHmzRgN"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+      </iframe>
+    </div>
+  </div>
+<div class="video-cta">
+    <button class="btn-ritiri" onclick="trackEvent('click_ritiri_guida','thank_you','Pulsante ritiri');window.open('https://vallebenedetta.org/ritiri-ed-eventi/','_blank')">Guarda i prossimi ritiri →</button>
+  </div>
+
+  <section class="info-section">
+    <div class="info-inner">
+      <div class="info-left">
+        <p class="info-eyebrow">Il Centro</p>
+        <h2 class="info-title">Chi è Valle Benedetta Retreat Center</h2>
+        <p class="info-text">Valle Benedetta è un centro di ritiro contemplativo immerso nelle colline toscane, vicino a Livorno. Un luogo dove il silenzio non è assenza, ma presenza. Fondato da Eraldo e Komal, nasce dall'incontro tra tradizioni contemplative orientali e la profonda spiritualità del paesaggio toscano. Ogni ritiro è un invito a fermarsi, ascoltare e ritrovare il filo con se stessi.</p>
+        <button class="btn-scopri" onclick="trackEvent('click_ritiri_guida','thank_you','Pulsante ritiri');window.open('https://vallebenedetta.org/ritiri-ed-eventi/','_blank')">Scopri i prossimi ritiri</button>
+      </div>
+      <div class="info-img">
+        <img src="retreat.jpg" alt="Valle Benedetta Retreat Center" loading="lazy" width="800" height="450"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section alt">
+    <div class="info-inner">
+      <div class="info-left">
+        <p class="info-eyebrow">La Location</p>
+        <h2 class="info-title">Dove si trova Valle Benedetta</h2>
+        <p class="info-text">Il centro si trova sulle colline di Valle Benedetta, a pochi chilometri da Livorno, in Toscana. Raggiungibile in treno o auto, è circondato da uliveti, boschi e panorami sulla costa tirrenica. Un contesto naturale che diventa parte integrante dell'esperienza: il paesaggio cura insieme alla pratica.</p>
+        <button class="btn-scopri" onclick="trackEvent('click_ritiri_guida','thank_you','Pulsante ritiri');window.open('https://vallebenedetta.org/ritiri-ed-eventi/','_blank')">Scopri i prossimi ritiri</button>
+      </div>
+      <div class="info-img">
+        <img src="valley.jpg" alt="Le colline di Valle Benedetta, Livorno" loading="lazy" width="800" height="450"/>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#F5EDE4;padding:3rem 3.5rem;text-align:center;border-top:1px solid #E8E0D4;">
+    <p style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:300;color:#2C2420;margin-bottom:0.6rem;">Vuoi sapere di più su di noi?</p>
+    <p style="font-size:13px;color:#7A6E64;margin-bottom:1.75rem;font-weight:300;">Esplora il sito ufficiale di Valle Benedetta Retreat Center.</p>
+    <a href="https://vallebenedetta.org/" target="_blank" onclick="trackEvent('click_sito_guida','thank_you','Vai al sito ufficiale')" style="display:inline-block;background:#831619;color:#fff;border:none;border-radius:6px;padding:14px 36px;font-size:13.5px;font-weight:500;font-family:'Inter',sans-serif;letter-spacing:0.05em;text-decoration:none;">Vai al sito ufficiale →</a>
+  </section>
+
+  <footer class="foot-band">
+    <img src="logo.png" alt="Valle Benedetta Tuscany Retreat Center" style="height:88px;width:auto;display:block;" loading="lazy" width="138" height="88"/>
+    <span class="foot-copy">© 2026 · Valle Benedetta Tuscany Retreat Center</span>
+  </footer>
+
+</div>
+</body>
+</html>
